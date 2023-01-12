@@ -11,6 +11,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './footer.module.css';
 import { DEFAULT_LINKS, LOREM_IPSUM } from './sampleData';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
+import './style.css';
 
 const Footer = props => {
     const { links } = props;
@@ -56,7 +57,7 @@ const Footer = props => {
     });
 
     return (
-        <footer data-cy="Footer-root" className={classes.root}>
+        <footer data-cy="Footer-root" className={`${classes.root} footer-root`}>
             <div className={classes.links}>
                 {linkGroups}
                 <div className={classes.callout}>
@@ -92,7 +93,7 @@ const Footer = props => {
                 </div>
                 <Newsletter />
             </div>
-            <div className={classes.branding}>
+            <div className={'branding'}>
                 <ul className={classes.legal}>
                     <li data-cy="Footer-terms" className={classes.terms}>
                         <FormattedMessage
@@ -108,13 +109,13 @@ const Footer = props => {
                     </li>
                 </ul>
                 <p className={classes.copyright}>{copyrightText || null}</p>
-                <Link
+                {/* <Link
                     to={resourceUrl('/')}
                     aria-label={title}
                     className={classes.logoContainer}
                 >
                     <Logo classes={{ logo: classes.logo }} />
-                </Link>
+                </Link> */}
             </div>
         </footer>
     );

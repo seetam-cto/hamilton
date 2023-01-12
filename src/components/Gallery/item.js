@@ -84,6 +84,7 @@ const GalleryItem = props => {
 
     return (
         <div data-cy="GalleryItem-root" className={classes.root} ref={itemRef}>
+            {wishlistButton}
             <Link
                 onClick={handleLinkClick}
                 to={productLink}
@@ -121,7 +122,6 @@ const GalleryItem = props => {
             <div className={classes.actionsContainer}>
                 {' '}
                 {addButton}
-                {wishlistButton}
             </div>
         </div>
     );

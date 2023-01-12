@@ -11,7 +11,7 @@ import {
     hasLengthAtLeast,
     isRequired,
     validatePassword
-} from '../../../util/formValidators';
+} from '@magento/venia-ui/lib/util/formValidators';
 
 import Button from '../../Button';
 import Checkbox from '../../Checkbox';

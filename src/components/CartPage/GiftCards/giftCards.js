@@ -7,7 +7,7 @@ import { useGiftCards } from '@magento/peregrine/lib/talons/CartPage/GiftCards/u
 import { Price, useToasts } from '@magento/peregrine';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../../Button';
 import Field from '../../Field';
 import Icon from '../../Icon';

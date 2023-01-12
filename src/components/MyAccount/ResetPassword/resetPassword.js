@@ -7,7 +7,7 @@ import { useToasts } from '@magento/peregrine';
 import { useResetPassword } from '@magento/peregrine/lib/talons/MyAccount/useResetPassword';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../../Button';
 import Field from '../../Field';
 import FormErrors from '../../FormError';

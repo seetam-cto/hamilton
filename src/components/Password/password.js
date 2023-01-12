@@ -8,7 +8,7 @@ import { usePassword } from '@magento/peregrine/lib/talons/Password/usePassword'
 import Button from '../Button';
 import Field from '../Field';
 import TextInput from '../TextInput';
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 
 import defaultClasses from './password.module.css';
 

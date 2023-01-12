@@ -6,7 +6,7 @@ import { shape, string } from 'prop-types';
 import { useNewsletter } from '@magento/peregrine/lib/talons/Newsletter/useNewsletter';
 import { useToasts } from '@magento/peregrine';
 
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import FormError from '../FormError';
 import Button from '../Button';
@@ -16,6 +16,7 @@ import TextInput from '../TextInput';
 import LinkButton from '../LinkButton';
 import Shimmer from './newsletter.shimmer';
 import defaultClasses from './newsletter.module.css';
+import './newletter.css';
 
 const Newsletter = props => {
     const { formatMessage } = useIntl();
@@ -92,7 +93,7 @@ const Newsletter = props => {
             />
             <Form
                 getApi={setFormApi}
-                className={classes.form}
+                className={'form'}
                 onSubmit={handleSubmit}
             >
                 <Field
@@ -101,17 +102,18 @@ const Newsletter = props => {
                         id: 'global.email',
                         defaultMessage: 'Email'
                     })}
-                >
+                    >
                     <TextInput
                         autoComplete="email"
                         field="email"
                         id="email"
                         validate={isRequired}
+                        className={'input'}
                     />
                 </Field>
                 <LinkButton
                     data-cy="Newsletter-submitButton"
-                    className={classes.subscribe_link}
+                    className={'subscribe_link'}
                     type="submit"
                     disabled={isBusy}
                     onClick={clearErrors}

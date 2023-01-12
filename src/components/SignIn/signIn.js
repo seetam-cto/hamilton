@@ -5,7 +5,7 @@ import { Form } from 'informed';
 import { useSignIn } from '@magento/peregrine/lib/talons/SignIn/useSignIn';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../Button';
 import Field from '../Field';
 import TextInput from '../TextInput';

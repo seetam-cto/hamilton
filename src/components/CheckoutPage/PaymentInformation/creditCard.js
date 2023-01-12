@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl';
 import { bool, func, shape, string } from 'prop-types';
 import { useCreditCard } from '@magento/peregrine/lib/talons/CheckoutPage/PaymentInformation/useCreditCard';
 
-import { isRequired } from '../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Country from '../../Country';
 import Region from '../../Region';
 import Postcode from '../../Postcode';

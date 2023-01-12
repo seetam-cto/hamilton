@@ -1,0 +1,19 @@
+.form {
+    .subscribe_link {
+        display: block;
+        padding: 1rem;
+        background: #1A1B41;
+        border-radius: 5px;
+        color: white;
+        width: fit-content;
+        margin-top: 1rem;
+    }
+    input{
+        // border: none !important;
+        // outline: none;
+        margin-bottom: 2rem;
+    }
+    input:focus, input:active {
+        box-shadow: none;
+    }
+}
