@@ -9,7 +9,7 @@ import {
     hasLengthExactly,
     isRequired,
     validateRegionCode
-} from '../../util/formValidators';
+} from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../Button';
 import Field from '../Field';
 import TextInput from '../TextInput';

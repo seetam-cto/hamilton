@@ -7,7 +7,7 @@ import { useGuestForm } from '@magento/peregrine/lib/talons/CheckoutPage/Shippin
 import { useToasts } from '@magento/peregrine';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../../../Button';
 import Country from '../../../Country';
 import Field, { Message } from '../../../Field';

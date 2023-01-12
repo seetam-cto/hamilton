@@ -13,7 +13,7 @@ import {
     hasLengthAtLeast,
     validatePassword,
     isNotEqualToField
-} from '../../util/formValidators';
+} from '@magento/venia-ui/lib/util/formValidators';
 import combine from '../../util/combineValidators';
 import defaultClasses from './editForm.module.css';
 

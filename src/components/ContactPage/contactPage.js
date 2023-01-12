@@ -7,7 +7,7 @@ import { useToasts } from '@magento/peregrine';
 import { useContactPage } from '@magento/peregrine/lib/talons/ContactPage';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 
 import Button from '../Button';
 import CmsBlock from '../CmsBlock/block';

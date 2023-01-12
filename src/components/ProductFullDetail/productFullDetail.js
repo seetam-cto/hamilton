@@ -221,7 +221,7 @@ const ProductFullDetail = props => {
     );
 
     const shortDescription = productDetails.shortDescription ? (
-        <RichContent html={productDetails.shortDescription.html} />
+        <div dangerouslySetInnerHTML={{'__html': productDetails.shortDescription.html}}></div>
     ) : null;
 
     const pageBuilderAttributes = customAttributesDetails.pagebuilder.length ? (
@@ -245,24 +245,21 @@ const ProductFullDetail = props => {
                 <section className={classes.imageCarousel}>
                     <Carousel images={mediaGalleryEntries} />
                 </section>
-                <section className={classes.title}>
+                <section className={'product-header mx-sm'}>
                     <h1
                         aria-live="polite"
-                        className={`product-title`}
+                        className={`product-header-title`}
                         data-cy="ProductFullDetail-productName"
                     >
                         {productDetails.name}
                     </h1>
-                    <p
-                        data-cy="ProductFullDetail-productPrice"
-                        className={classes.productPrice}
-                    >
-                        <Price
-                            currencyCode={productDetails.price.currency}
-                            value={productDetails.price.value}
-                        />
-                    </p>
                     {shortDescription}
+                </section>
+                <section className='product-price mx-sm'>
+                    <Price
+                        currencyCode={productDetails.price.currency}
+                        value={productDetails.price.value}
+                    />
                 </section>
                 <FormError
                     classes={{
@@ -287,11 +284,11 @@ const ProductFullDetail = props => {
                         message={errors.get('quantity')}
                     />
                 </section>
-                <section className={classes.actions}>
-                    {cartActionContent}
+                <section className={'product-action-buttons mx-sm'}>
                     <Suspense fallback={null}>
                         <WishlistButton {...wishlistButtonProps} />
                     </Suspense>
+                    {cartActionContent}
                 </section>
                 <section className={classes.description}>
                     <span

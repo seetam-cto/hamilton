@@ -5,7 +5,7 @@ import { arrayOf, bool, func, number, shape, string } from 'prop-types';
 import { useCustomerForm } from '@magento/peregrine/lib/talons/CheckoutPage/ShippingInformation/AddressForm/useCustomerForm';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../../../Button';
 import Checkbox from '../../../Checkbox';
 import Country from '../../../Country';

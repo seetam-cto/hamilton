@@ -4,6 +4,8 @@ import { oneOf, shape, string, bool } from 'prop-types';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './button.module.css';
+import "./style.css"
+
 
 const getRootClassName = (priority, negative) =>
     `root_${priority}Priority${negative ? 'Negative' : ''}`;
@@ -46,7 +48,7 @@ const Button = props => {
     return (
         <button
             ref={buttonRef}
-            className={rootClassName}
+            className={'button primary'}
             {...buttonProps}
             {...restProps}
         >

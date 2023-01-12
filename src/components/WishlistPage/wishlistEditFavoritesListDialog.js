@@ -6,7 +6,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import Dialog from '../Dialog';
 import defaultClasses from './wishlistEditFavoritesListDialog.module.css';
 import TextInput from '../TextInput';
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Field from '../Field';
 import FormError from '../FormError';
 

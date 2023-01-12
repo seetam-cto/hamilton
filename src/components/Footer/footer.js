@@ -108,13 +108,13 @@ const Footer = props => {
                     </li>
                 </ul>
                 <p className={classes.copyright}>{copyrightText || null}</p>
-                <Link
+                {/* <Link
                     to={resourceUrl('/')}
                     aria-label={title}
                     className={classes.logoContainer}
                 >
                     <Logo classes={{ logo: classes.logo }} />
-                </Link>
+                </Link> */}
             </div>
         </footer>
     );

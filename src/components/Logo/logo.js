@@ -35,7 +35,6 @@ const Logo = props => {
 
     useEffect(() => {
         handleFetch()
-        console.log(process.env.MAGENTO_BACKEND_URL,logo)
     },[])
 
     return (

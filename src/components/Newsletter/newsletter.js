@@ -6,7 +6,7 @@ import { shape, string } from 'prop-types';
 import { useNewsletter } from '@magento/peregrine/lib/talons/Newsletter/useNewsletter';
 import { useToasts } from '@magento/peregrine';
 
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import FormError from '../FormError';
 import Button from '../Button';

@@ -8,7 +8,7 @@ import { useCreateWishlist } from '@magento/peregrine/lib/talons/WishlistPage/us
 import Dialog from '../Dialog';
 import Field from '../Field';
 import Icon from '../Icon';
-import { isRequired } from '../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 
 import TextInput from '../TextInput';

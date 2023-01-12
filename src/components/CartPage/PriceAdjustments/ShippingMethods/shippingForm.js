@@ -5,7 +5,7 @@ import { func, shape, string } from 'prop-types';
 import { useShippingForm } from '@magento/peregrine/lib/talons/CartPage/PriceAdjustments/ShippingMethods/useShippingForm';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import { isRequired } from '../../../../util/formValidators';
+import { isRequired } from '@magento/venia-ui/lib/util/formValidators';
 import Button from '../../../Button';
 
 import Country from '../../../Country';
