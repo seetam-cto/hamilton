@@ -8,6 +8,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import Icon from '../../Icon';
 import defaultClasses from './addToListButton.module.css';
 import { useCommonToasts } from './useCommonToasts';
+import "./style.css"
 
 const HeartIcon = <Icon size={20} src={Heart} />;
 
@@ -28,11 +29,12 @@ const AddToListButton = props => {
     const { buttonProps: ariaButtonProps } = useButton(buttonProps, buttonRef);
 
     const classes = useStyle(defaultClasses, props.classes);
-    const buttonClass = isSelected ? classes.root_selected : classes.root;
+    const buttonClass = isSelected ? 'button wishlist selected' : 'button wishlist';
 
     return (
         <button ref={buttonRef} className={buttonClass} {...ariaButtonProps}>
-            {props.icon} {buttonText}
+            {/* {props.icon} */}
+            Wishlist
         </button>
     );
 };
