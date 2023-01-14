@@ -79,22 +79,11 @@ const Footer = props => {
                             defaultMessage={LOREM_IPSUM}
                         />
                     </p>
-                    <ul className={classes.socialLinks}>
-                        <li>
-                            <Instagram size={20} />
-                        </li>
-                        <li>
-                            <Facebook size={20} />
-                        </li>
-                        <li>
-                            <Twitter size={20} />
-                        </li>
-                    </ul>
                 </div>
                 <Newsletter />
             </div>
             <div className={'branding'}>
-                <ul className={classes.legal}>
+                {/* <ul className={classes.legal}>
                     <li data-cy="Footer-terms" className={classes.terms}>
                         <FormattedMessage
                             id={'footer.termsText'}
@@ -107,8 +96,19 @@ const Footer = props => {
                             defaultMessage={'Privacy Policy'}
                         />
                     </li>
-                </ul>
-                <p className={classes.copyright}>{copyrightText || null}</p>
+                </ul> */}
+                <ul className={classes.socialLinks}>
+                        <li>
+                            <Instagram size={20} />
+                        </li>
+                        <li>
+                            <Facebook size={20} />
+                        </li>
+                        <li>
+                            <Twitter size={20} />
+                        </li>
+                    </ul>
+                <p className={'copyright'}>{copyrightText || null}</p>
                 {/* <Link
                     to={resourceUrl('/')}
                     aria-label={title}
