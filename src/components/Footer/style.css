@@ -12,9 +12,15 @@
     border-top: 1px solid black;
     padding: 2rem 1rem;
 }
+.copyright{
+    width: 60%;
+}
 
 @media screen and (min-width: 900px) {
     .footer-root {
         padding: 0 4rem;
+    }
+    .copyright {
+        width: max-content;
     }
 }

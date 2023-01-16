@@ -123,7 +123,7 @@ const Newsletter = props => {
                         defaultMessage={'Subscribe'}
                     />
                 </LinkButton>
-                <div className={classes.buttonsContainer}>
+                {/* <div className={classes.buttonsContainer}>
                     <Button
                         priority="normal"
                         type="submit"
@@ -135,7 +135,7 @@ const Newsletter = props => {
                             defaultMessage={'Subscribe'}
                         />
                     </Button>
-                </div>
+                </div> */}
             </Form>
         </div>
     );
