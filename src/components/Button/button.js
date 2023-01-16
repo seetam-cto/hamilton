@@ -48,7 +48,7 @@ const Button = props => {
     return (
         <button
             ref={buttonRef}
-            className={'button primary'}
+            className={rootClassName}
             {...buttonProps}
             {...restProps}
         >

@@ -7,4 +7,5 @@ module.exports = componentOverride = {
     ['@magento/venia-ui/lib/components/Newsletter/newsletter.js']: 'src/components/Newsletter/newsletter.js',
     ['@magento/venia-ui/lib/components/Newsletter/newsletter.shimmer.js']: 'src/components/Newsletter/newsletter.shimmer.js',
     ['@magento/venia-ui/lib/components/Button/button.js']: 'src/components/Button/button.js',
+    ['@magento/venia-ui/lib/components/HomePage/homePage.ce.js']: 'src/components/HomePage/homePage.js',
 };

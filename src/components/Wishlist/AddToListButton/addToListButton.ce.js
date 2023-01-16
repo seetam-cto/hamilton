@@ -33,8 +33,8 @@ const AddToListButton = props => {
 
     return (
         <button ref={buttonRef} className={buttonClass} {...ariaButtonProps}>
-            {/* {props.icon} */}
-            Wishlist
+            {props.icon}
+            {buttonText}
         </button>
     );
 };
