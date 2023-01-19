@@ -54,7 +54,7 @@ const GalleryItem = props => {
     const productLink = resourceUrl(`/${url_key}${productUrlSuffix || ''}`);
 
     const wishlistButton = wishlistButtonProps ? (
-        <WishlistGalleryButton {...wishlistButtonProps} />
+        <WishlistGalleryButton {...wishlistButtonProps} showIcon={true}/>
     ) : null;
 
     const addButton = isSupportedProductType ? (

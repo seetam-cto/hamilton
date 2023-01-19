@@ -22,7 +22,8 @@ const AddToListButton = props => {
         errorToastProps,
         isSelected,
         loginToastProps,
-        successToastProps
+        successToastProps,
+        showIcon
     } = talonProps;
 
     useCommonToasts({ errorToastProps, loginToastProps, successToastProps });
@@ -32,9 +33,9 @@ const AddToListButton = props => {
     const buttonClass = isSelected ? 'button wishlist selected' : 'button wishlist';
 
     return (
-        <button ref={buttonRef} className={buttonClass} {...ariaButtonProps}>
-            {props.icon}
-            {buttonText}
+        <button ref={buttonRef} className={!showIcon && buttonClass} {...ariaButtonProps}>
+            {showIcon && props.icon}
+            {!showIcon && buttonText}
         </button>
     );
 };

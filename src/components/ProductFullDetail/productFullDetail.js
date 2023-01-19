@@ -187,7 +187,7 @@ const ProductFullDetail = props => {
         );
     // Error message for screen reader
     const cartActionContent = isSupportedProductType ? (
-        <section className={classes.actButton}>
+        <section className={`classes.actButton`}>
             <Button
                 data-cy="ProductFullDetail-addToCartButton"
                 disabled={isAddToCartDisabled}
@@ -201,6 +201,7 @@ const ProductFullDetail = props => {
                           })
                         : ''
                 }
+                className={`actButton`}
                 priority="high"
                 type="submit"
             >
@@ -270,9 +271,9 @@ const ProductFullDetail = props => {
                     }}
                     errors={errors.get('form') || []}
                 />
-                <section className={''}>{options}</section>
-                <section className={classes.quantity}>
-                    <span
+                <section className={`options-container`}>{options}</section>
+                <section className={`classes.quantity quantity-stepper`}>
+                    {/* <span
                         data-cy="ProductFullDetail-quantityTitle"
                         className={classes.quantityTitle}
                     >
@@ -280,7 +281,7 @@ const ProductFullDetail = props => {
                             id={'global.quantity'}
                             defaultMessage={'Quantity'}
                         />
-                    </span>
+                    </span> */}
                     <QuantityStepper
                         classes={{ root: classes.quantityRoot }}
                         min={1}
@@ -289,7 +290,7 @@ const ProductFullDetail = props => {
                 </section>
                 <section className={'product-action-buttons mx-sm'}>
                     <Suspense fallback={null}>
-                        <WishlistButton {...wishlistButtonProps} />
+                        <WishlistButton {...wishlistButtonProps} showIcon={false} />
                     </Suspense>
                     {cartActionContent}
                 </section>

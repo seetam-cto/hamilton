@@ -73,8 +73,8 @@ const Tile = props => {
                 (attribute_code === 'color')
                 ?
                 <button
-                    className={`${className} color-option-button`}
-                    style={{ backgroundColor: `${props.item.swatch_data?.value}`, border: '2px solid white' }}
+                    className={`${className} color-option-button options-child`}
+                    style={{ backgroundColor: `${props.item.swatch_data?.value}`, border: '2px solid white', outline: 'none' }}
                     onClick={(event) => {
                         handleClick(event);
                         handleClickColor(event)
@@ -87,7 +87,7 @@ const Tile = props => {
                 </button> 
                 :
                 <button
-                className={`${className}`}
+                className={`${className} options-child`}
                 onClick={handleClick}
                 title={label}
                 type="button"

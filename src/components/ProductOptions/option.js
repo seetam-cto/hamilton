@@ -19,6 +19,7 @@ import Select from '../Select/select';
 import defaultClasses from './option.module.css';
 import { useOption } from '@magento/peregrine/lib/talons/ProductOptions/useOption';
 
+
 const getItemKey = ({ value_index }) => value_index;
 
 // TODO: get an explicit field from the API
@@ -64,20 +65,29 @@ const Option = props => {
     const classes = useStyle(defaultClasses, props.classes);
 
     return (
-        <div className={`${classes.root}`} data-cy="ProductOptions-Option-root" >
-            <span className={classes.title}>{label}</span>
+        <div className={`
+        ${classes.root} 
+        product-options-root 
+        ${attribute_code == 'color' && 'color-options'}
+        ${attribute_code=='variant' && 'variant-options'}
+        ${attribute_code=='capacity' && 'capacity-options'}
+        `} 
+        data-cy="ProductOptions-Option-root" >
+            {/* <span className={classes.title}>{label}</span> */}
+
+            <ValueList
+                getItemKey={getItemKey}
+                selectedValue={initialSelection}
+                items={values}
+                onSelectionChange={handleSelectionChange}
+                isEverythingOutOfStock={isEverythingOutOfStock}
+                outOfStockVariants={outOfStockVariants}
+                attribute_code={attribute_code}
+            />
+
             
-                <ValueList
-                    getItemKey={getItemKey}
-                    selectedValue={initialSelection}
-                    items={values}
-                    onSelectionChange={handleSelectionChange}
-                    isEverythingOutOfStock={isEverythingOutOfStock}
-                    outOfStockVariants={outOfStockVariants}
-                    attribute_code={attribute_code}
-                />
-           
-            <dl className={classes.selection}>
+
+            {/* <dl className={classes.selection}>
                 <dt
                     data-cy="ProductOptions-Option-selectedLabel"
                     className={classes.selectionLabel}
@@ -89,7 +99,7 @@ const Option = props => {
                     />
                 </dt>
                 <dd>{selectedValueDescription}</dd>
-            </dl>
+            </dl> */}
         </div>
     );
 };

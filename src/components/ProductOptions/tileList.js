@@ -71,16 +71,19 @@ const TileList = props => {
 
     return (
         attribute_code == 'color' ?
-            <div className={`${classes.root}`}>{tiles}</div>
+            <div className={`${classes.root}`}>
+                <div style={{display:'grid', placeContent: 'center', fontWeight:'500'}}>{`Select ${attribute_code} : `}</div>
+                {tiles}
+            </div>
             :
-            // <div className={'tiles-button'}>
-            //     <div onClick={handleExpand}>{attribute_code}</div>
-            //     {
-            //         styleDropDown
-            //         &&
-                    <div>{tiles}</div>
-            //     }
-            // </div>
+            <div className={'tiles-button'}>
+                <div onClick={handleExpand}>{attribute_code}</div>
+                {
+                    styleDropDown
+                    &&
+                    <div className='tile-carousel'>{tiles}</div>
+                }
+            </div>
         // <Select
         //     items={items}
         //     className={'custom-dropdown'}

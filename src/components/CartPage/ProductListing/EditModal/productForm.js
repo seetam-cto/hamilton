@@ -98,9 +98,7 @@ const ProductForm = props => {
                     configurableThumbnailSource={configurableThumbnailSource}
                 />
                 <Options
-                    classes={{
-                        root: classes.optionRoot
-                    }}
+                    classes={`${{root: classes.optionRoot}}`}
                     onSelectionChange={handleOptionSelection}
                     options={configItem.configurable_options}
                     selectedValues={cartItem.configurable_options}
