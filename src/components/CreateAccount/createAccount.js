@@ -5,7 +5,7 @@ import { func, shape, string, bool } from 'prop-types';
 import { useCreateAccount } from '@magento/peregrine/lib/talons/CreateAccount/useCreateAccount';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import combine from '../../util/combineValidators';
+import combine from '@magento/venia-ui/lib/util/combineValidators';
 import {
     hasLengthAtLeast,
     isRequired,

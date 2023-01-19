@@ -221,7 +221,7 @@ const ProductFullDetail = props => {
     );
 
     const shortDescription = productDetails.shortDescription ? (
-        <div dangerouslySetInnerHTML={{'__html': productDetails.shortDescription.html}}></div>
+        <div className='product-short-description' dangerouslySetInnerHTML={{'__html': productDetails.shortDescription.html}}></div>
     ) : null;
 
     const pageBuilderAttributes = customAttributesDetails.pagebuilder.length ? (
@@ -245,17 +245,19 @@ const ProductFullDetail = props => {
                 <section className={classes.imageCarousel}>
                     <Carousel images={mediaGalleryEntries} />
                 </section>
-                <section className={'product-header mx-sm'}>
+                <section className={'product-section product-header mx-sm'}>
                     <h1
                         aria-live="polite"
-                        className={`product-header-title`}
+                        className={`product-section product-header-title`}
                         data-cy="ProductFullDetail-productName"
                     >
                         {productDetails.name}
                     </h1>
                     {shortDescription}
+                    <p className='product-brand'>{customAttributesDetails.list?.filter(atr => atr.attribute_metadata.code === "brand2")[0]?.entered_attribute_value.value}</p>
+                    <div className='product-divider'/>
                 </section>
-                <section className='product-price mx-sm'>
+                <section className='product-section product-price mx-sm'>
                     <Price
                         currencyCode={productDetails.price.currency}
                         value={productDetails.price.value}
@@ -284,7 +286,7 @@ const ProductFullDetail = props => {
                         message={errors.get('quantity')}
                     />
                 </section>
-                <section className={'product-action-buttons mx-sm'}>
+                <section className={'product-section product-action-buttons mx-sm'}>
                     <Suspense fallback={null}>
                         <WishlistButton {...wishlistButtonProps} />
                     </Suspense>

@@ -12,7 +12,7 @@ import "./style.css"
 
 const HeartIcon = <Icon size={20} src={Heart} />;
 
-const AddToListButton = props => {
+const AddToListButtonIcon = props => {
     const talonProps = useAddToListButton(props);
     const buttonRef = useRef();
 
@@ -33,19 +33,19 @@ const AddToListButton = props => {
 
     return (
         <button ref={buttonRef} className={buttonClass} {...ariaButtonProps}>
-            {/* {props.icon} */}
+            {props.icon}
             {buttonText}
         </button>
     );
 };
 
-export default AddToListButton;
+export default AddToListButtonIcon;
 
-AddToListButton.defaultProps = {
+AddToListButtonIcon.defaultProps = {
     icon: HeartIcon
 };
 
-AddToListButton.propTypes = {
+AddToListButtonIcon.propTypes = {
     afterAdd: func,
     beforeAdd: func,
     classes: shape({
