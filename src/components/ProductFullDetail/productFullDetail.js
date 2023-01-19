@@ -223,7 +223,7 @@ const ProductFullDetail = props => {
     );
 
     const shortDescription = productDetails.shortDescription ? (
-        <div dangerouslySetInnerHTML={{'__html': productDetails.shortDescription.html}}></div>
+        <div className='product-short-description' dangerouslySetInnerHTML={{'__html': productDetails.shortDescription.html}}></div>
     ) : null;
 
     const pageBuilderAttributes = customAttributesDetails.pagebuilder.length ? (
@@ -247,18 +247,24 @@ const ProductFullDetail = props => {
                 <section className={`${classes.imageCarousel} image-carousel`}>
                     <Carousel images={mediaGalleryEntries} />
                 </section>
-                <section className={'product-header mx-sm'}>
+                <section className={'product-section product-header mx-sm'}>
                     <h1
                         aria-live="polite"
-                        className={`product-header-title`}
+                        className={`product-section product-header-title`}
                         data-cy="ProductFullDetail-productName"
                     >
                         {productDetails.name}
                     </h1>
                     {shortDescription}
+                    <p className='product-brand'>{customAttributesDetails.list?.filter(atr => atr.attribute_metadata.code === "brand2")[0]?.entered_attribute_value.value}</p>
+                    <div className='product-divider'/>
                 </section>
+<<<<<<< HEAD
                 <section className='border-bottom'>MILTON</section>
                 <section className='product-price mx-sm'>
+=======
+                <section className='product-section product-price mx-sm'>
+>>>>>>> 95dd0d107224d2043b115b5f2468d7c289f9863b
                     <Price
                         currencyCode={productDetails.price.currency}
                         value={productDetails.price.value}
@@ -288,7 +294,7 @@ const ProductFullDetail = props => {
                         message={errors.get('quantity')}
                     />
                 </section>
-                <section className={'product-action-buttons mx-sm'}>
+                <section className={'product-section product-action-buttons mx-sm'}>
                     <Suspense fallback={null}>
                         <WishlistButton {...wishlistButtonProps} showIcon={false} />
                     </Suspense>

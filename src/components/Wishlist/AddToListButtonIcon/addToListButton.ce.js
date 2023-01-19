@@ -12,7 +12,7 @@ import "./style.css"
 
 const HeartIcon = <Icon size={20} src={Heart} />;
 
-const AddToListButton = props => {
+const AddToListButtonIcon = props => {
     const talonProps = useAddToListButton(props);
     const buttonRef = useRef();
 
@@ -22,8 +22,7 @@ const AddToListButton = props => {
         errorToastProps,
         isSelected,
         loginToastProps,
-        successToastProps,
-        showIcon
+        successToastProps
     } = talonProps;
 
     useCommonToasts({ errorToastProps, loginToastProps, successToastProps });
@@ -33,26 +32,20 @@ const AddToListButton = props => {
     const buttonClass = isSelected ? 'button wishlist selected' : 'button wishlist';
 
     return (
-<<<<<<< HEAD
-        <button ref={buttonRef} className={!showIcon && buttonClass} {...ariaButtonProps}>
-            {showIcon && props.icon}
-            {!showIcon && buttonText}
-=======
         <button ref={buttonRef} className={buttonClass} {...ariaButtonProps}>
-            {/* {props.icon} */}
+            {props.icon}
             {buttonText}
->>>>>>> 95dd0d107224d2043b115b5f2468d7c289f9863b
         </button>
     );
 };
 
-export default AddToListButton;
+export default AddToListButtonIcon;
 
-AddToListButton.defaultProps = {
+AddToListButtonIcon.defaultProps = {
     icon: HeartIcon
 };
 
-AddToListButton.propTypes = {
+AddToListButtonIcon.propTypes = {
     afterAdd: func,
     beforeAdd: func,
     classes: shape({

@@ -1,11 +1,11 @@
 import React from 'react';
 import { createTestInstance } from '@magento/peregrine';
 
-import mapProduct from '../../../util/mapProduct';
+import mapProduct from '@magento/venia-ui/lib/util/mapProduct';
 import SuggestedProduct from '../suggestedProduct';
 import SuggestedProducts from '../suggestedProducts';
 
-jest.mock('../../../util/mapProduct', () => jest.fn());
+jest.mock('@magento/venia-ui/lib/util/mapProduct', () => jest.fn());
 jest.mock('../suggestedProduct', () => () => null);
 
 const products = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }];
