@@ -1,3 +1,13 @@
+.product-header {
+  padding: 1rem 0;
+}
+
+.product-header p {
+  padding-top: 1rem;
+  color: rgba(0,0,0,0.5);
+  /* color: #1A1B41; */
+}
+
 .product-header-title {
   font-family: "Poppins";
   font-style: normal;
@@ -6,16 +16,47 @@
   line-height: 43px;
   color: #1A1B41;
 }
+
 .product-action-buttons {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
   align-items: baseline;
 }
+
 .product-price {
-  font-style: normal;
+  /* font-style: normal;
   font-weight: 500;
   font-size: 30px;
   line-height: 36px;
-  color: #1A1B41;
-}/*# sourceMappingURL=style.css.map */
+  color: #1A1B41; */
+  font-family: 'Indian Rupee';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  padding-top: 1rem;
+}
+
+.product-price div {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+.image-carousel {
+  height: 100%;
+}
+
+.border-bottom {
+  margin-left: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0,0,0,0.5);
+}

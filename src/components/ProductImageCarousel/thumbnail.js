@@ -7,6 +7,7 @@ import { useThumbnail } from '@magento/peregrine/lib/talons/ProductImageCarousel
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './thumbnail.module.css';
+import './thumbnail.css'
 import Image from '../Image';
 
 const DEFAULT_THUMBNAIL_HEIGHT = 170;
@@ -51,29 +52,29 @@ const Thumbnail = props => {
         return file ? (
             <Image
                 alt={label}
-                classes={{ image: classes.image }}
-                height={DEFAULT_THUMBNAIL_HEIGHT}
+                // classes={{ image: classes.image }}
+                // height={DEFAULT_THUMBNAIL_HEIGHT}
                 resource={file}
                 width={DEFAULT_THUMBNAIL_WIDTH}
             />
         ) : (
             <Image
                 alt={label}
-                classes={{ image: classes.image }}
+                // classes={{ image: classes.image }}
                 src={transparentPlaceholder}
             />
         );
     }, [file, isDesktop, label, classes.image]);
 
     return (
-        <span
-            className={isActive ? classes.rootSelected : classes.root}
+        <div
+            className={`${isActive ? classes.rootSelected : classes.root} thumbnail-child-container`}
             onClick={handleClick}
             role="button"
             aria-hidden="true"
         >
             {thumbnailImage}
-        </span>
+        </div   >
     );
 };
 

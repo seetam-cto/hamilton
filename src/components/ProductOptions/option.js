@@ -14,6 +14,8 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import getOptionType from './getOptionType';
 import SwatchList from './swatchList';
 import TileList from './tileList';
+// import Select from '@magento/venia-ui/lib/components/Select';
+import Select from '../Select/select';
 import defaultClasses from './option.module.css';
 import { useOption } from '@magento/peregrine/lib/talons/ProductOptions/useOption';
 
@@ -39,6 +41,7 @@ const Option = props => {
         outOfStockVariants
     } = props;
 
+
     const talonProps = useOption({
         attribute_id,
         label,
@@ -61,16 +64,19 @@ const Option = props => {
     const classes = useStyle(defaultClasses, props.classes);
 
     return (
-        <div className={classes.root} data-cy="ProductOptions-Option-root">
+        <div className={`${classes.root}`} data-cy="ProductOptions-Option-root" >
             <span className={classes.title}>{label}</span>
-            <ValueList
-                getItemKey={getItemKey}
-                selectedValue={initialSelection}
-                items={values}
-                onSelectionChange={handleSelectionChange}
-                isEverythingOutOfStock={isEverythingOutOfStock}
-                outOfStockVariants={outOfStockVariants}
-            />
+            
+                <ValueList
+                    getItemKey={getItemKey}
+                    selectedValue={initialSelection}
+                    items={values}
+                    onSelectionChange={handleSelectionChange}
+                    isEverythingOutOfStock={isEverythingOutOfStock}
+                    outOfStockVariants={outOfStockVariants}
+                    attribute_code={attribute_code}
+                />
+           
             <dl className={classes.selection}>
                 <dt
                     data-cy="ProductOptions-Option-selectedLabel"

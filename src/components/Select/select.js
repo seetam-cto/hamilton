@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useMemo } from 'react';
 import { arrayOf, node, number, oneOfType, shape, string } from 'prop-types';
 import {
     Option as InformedOption,
     Select as InformedSelect,
     useFieldState
 } from 'informed';
-
+import Option from './option';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import { FieldIcons, Message } from '../Field';
 import defaultClasses from './select.module.css';
@@ -21,24 +21,68 @@ const Select = props => {
         field,
         items,
         message,
+        onSelectionChange,
+        getItemKey,
+        selectedValue,
+        isEverythingOutOfStock,
+        outOfStockVariants,
+        attribute_code,
         ...rest
     } = props;
+    // console.log("select", selectedValue, attribute_code);
     const fieldState = useFieldState(field);
     const classes = useStyle(defaultClasses, propClasses);
     const inputClass = fieldState.error ? classes.input_error : classes.input;
 
-    const options = items.map(
-        ({ disabled = null, hidden = null, label, value, key = value }) => (
-            <InformedOption
-                key={key}
-                disabled={disabled}
-                hidden={hidden}
-                value={value}
-            >
-                {label || (value != null ? value : '')}
-            </InformedOption>
-        )
-    );
+    // const options = items.map(
+    //     ({ disabled = null, hidden = null, label, value, key = value }) => (
+    //         <InformedOption
+    //             key={key}
+    //             disabled={disabled}
+    //             hidden={hidden}
+    //             value={value}
+    //             onClick={onSelectionChange}
+    //         >
+    //             {label || (value != null ? value : '')}
+    //         </InformedOption>
+    //     )
+    // );
+    // console.log('testing', items);
+    let options = items.map(item => <Option item={item} onClick={onSelectionChange} />)
+    // const tiles = useMemo(
+    //     () =>
+    //         items.map(item => {
+    //             const isSelected = item.label === selectedValue.label;
+    //             let isOptionOutOfStock;
+    //             if (outOfStockVariants && outOfStockVariants.length > 0) {
+    //                 const flatOutOfStockArray = outOfStockVariants.flat();
+    //                 isOptionOutOfStock = flatOutOfStockArray.includes(
+    //                     item.value_index
+    //                 );
+    //             }
+
+    //             // console.log('testing', item);
+    //             return (
+    //                 <Option
+    //                     key={getItemKey(item)}
+    //                     isSelected={isSelected}
+    //                     item={item}
+    //                     onClick={onSelectionChange}
+    //                     isEverythingOutOfStock={isEverythingOutOfStock}
+    //                     isOptionOutOfStock={isOptionOutOfStock}
+    //                     attribute_code={attribute_code}
+    //                 />
+    //             );
+    //         }),
+    //     [
+    //         getItemKey,
+    //         selectedValue.label,
+    //         items,
+    //         onSelectionChange,
+    //         isEverythingOutOfStock,
+    //         outOfStockVariants
+    //     ]
+    // );
 
     return (
         <Fragment>

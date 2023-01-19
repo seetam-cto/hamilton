@@ -97,7 +97,7 @@ const Swatch = props => {
 
     return (
         <button
-            className={className}
+            className={'color-button-options'}
             onClick={handleClick}
             style={finalStyle}
             title={label}

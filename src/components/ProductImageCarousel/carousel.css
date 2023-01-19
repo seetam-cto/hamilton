@@ -1,0 +1,20 @@
+.carouselMainContainer {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    display: flex;
+}
+
+.previousButton, .nextButton {
+    /* position: absolute; */
+}
+.rootCarouselContainer {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.thumbnail-Container {
+    /* display: block; */
+    display: flex;
+    height: 20%;
+}

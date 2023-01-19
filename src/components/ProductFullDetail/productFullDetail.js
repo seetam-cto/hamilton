@@ -42,6 +42,7 @@ const ProductFullDetail = props => {
 
     const talonProps = useProductFullDetail({ product });
 
+
     const {
         breadcrumbCategoryId,
         errorMessage,
@@ -242,7 +243,7 @@ const ProductFullDetail = props => {
                 data-cy="ProductFullDetail-root"
                 onSubmit={handleAddToCart}
             >
-                <section className={classes.imageCarousel}>
+                <section className={`${classes.imageCarousel} image-carousel`}>
                     <Carousel images={mediaGalleryEntries} />
                 </section>
                 <section className={'product-header mx-sm'}>
@@ -255,11 +256,13 @@ const ProductFullDetail = props => {
                     </h1>
                     {shortDescription}
                 </section>
+                <section className='border-bottom'>MILTON</section>
                 <section className='product-price mx-sm'>
                     <Price
                         currencyCode={productDetails.price.currency}
                         value={productDetails.price.value}
                     />
+                    <div>Inclusive of all Taxes</div>
                 </section>
                 <FormError
                     classes={{
@@ -267,7 +270,7 @@ const ProductFullDetail = props => {
                     }}
                     errors={errors.get('form') || []}
                 />
-                <section className={classes.options}>{options}</section>
+                <section className={''}>{options}</section>
                 <section className={classes.quantity}>
                     <span
                         data-cy="ProductFullDetail-quantityTitle"

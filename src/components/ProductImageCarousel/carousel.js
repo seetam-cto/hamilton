@@ -15,6 +15,7 @@ import Icon from '../Icon';
 import Image from '../Image';
 import defaultClasses from './carousel.module.css';
 import Thumbnail from './thumbnail';
+import './carousel.css'
 
 const IMAGE_WIDTH = 640;
 
@@ -71,10 +72,10 @@ const ProductImageCarousel = props => {
         image = (
             <Image
                 alt={altText}
-                classes={{
-                    image: classes.currentImage,
-                    root: classes.imageContainer
-                }}
+                // classes={{
+                //     image: classes.currentImage,
+                //     root: classes.imageContainer
+                // }}
                 resource={currentImage.file}
                 width={IMAGE_WIDTH}
             />
@@ -83,10 +84,10 @@ const ProductImageCarousel = props => {
         image = (
             <Image
                 alt={altText}
-                classes={{
-                    image: classes.currentImage_placeholder,
-                    root: classes.imageContainer
-                }}
+                // classes={{
+                //     image: classes.currentImage_placeholder,
+                //     root: classes.imageContainer
+                // }}
                 src={transparentPlaceholder}
             />
         );
@@ -102,12 +103,14 @@ const ProductImageCarousel = props => {
         defaultMessage: 'Next Image'
     });
 
+    // console.log('test',image);
+
     const chevronClasses = { root: classes.chevron };
     return (
-        <div className={classes.root}>
-            <div className={classes.carouselContainer}>
+        <div className={`rootCarouselContainer`}>
+            <div className={`${classes.carouselContainer} carouselMainContainer`}>
                 <AriaButton
-                    className={classes.previousButton}
+                    className={'previousButton'}
                     onPress={handlePrevious}
                     aria-label={previousButton}
                     type="button"
@@ -120,7 +123,7 @@ const ProductImageCarousel = props => {
                 </AriaButton>
                 {image}
                 <AriaButton
-                    className={classes.nextButton}
+                    className={'nextButton'}
                     onPress={handleNext}
                     aria-label={nextButton}
                     type="button"
@@ -132,7 +135,7 @@ const ProductImageCarousel = props => {
                     />
                 </AriaButton>
             </div>
-            <div className={classes.thumbnailList}>{thumbnails}</div>
+            <div className={'thumbnail-Container'}>{thumbnails}</div>
         </div>
     );
 };
