@@ -12,8 +12,6 @@ const CustomAttributes = props => {
     const { customAttributes, showLabels } = props;
     const classes = useStyle(defaultClasses, props.classes);
 
-    console.log(customAttributes, showLabels);
-
     const list = useMemo(
         () =>
             customAttributes.reduce((previousAttribute, currentAttribute) => {

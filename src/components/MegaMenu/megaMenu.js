@@ -90,9 +90,10 @@ const MegaMenu = props => {
                 role="navigation"
                 onFocus={handleSubMenuFocus}
             >
+                {/* jrb */}
                 <div style={{ display: "grid", placeContent: "center", paddingRight: "10px" }}>
                     <Link to="/new-launches">New-Launches</Link>
-                </div> {/* jrb */}
+                </div> 
                 {shouldRenderItems ? items : null}
             </nav>
         </>

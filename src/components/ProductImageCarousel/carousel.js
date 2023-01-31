@@ -34,6 +34,7 @@ const IMAGE_WIDTH = 640;
  */
 const ProductImageCarousel = props => {
     const { images } = props;
+    console.log(images);
     const { formatMessage } = useIntl();
     const talonProps = useProductImageCarousel({
         images,
@@ -91,8 +92,8 @@ const ProductImageCarousel = props => {
                 //     image: classes.currentImage_placeholder,
                 //     root: classes.imageContainer
                 // }}
-                // src={url.pathname == "/new-launches" ? currentImage.url : transparentPlaceholder} //jrb
-            src={transparentPlaceholder}
+                src={url.pathname == "/new-launches" ? currentImage.url : transparentPlaceholder} //jrb
+            // src={transparentPlaceholder}
             />
         );
     }
@@ -139,10 +140,10 @@ const ProductImageCarousel = props => {
                     />
                 </AriaButton>
             </div>
-            {/* {
-                url.pathname !=='/new-launches' && */}
+            {
+                url.pathname !=='/new-launches' &&
                 <div className={'thumbnail-Container'}>{thumbnails}</div>
-            {/* } */}
+            }
         </div>
     );
 };

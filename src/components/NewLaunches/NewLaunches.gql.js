@@ -7,6 +7,7 @@ query GETPRODUCTS($search: String) {
         name
         sku
         uid
+        brand
         only_x_left_in_stock
         description {
           html
@@ -37,5 +38,4 @@ query GETPRODUCTS($search: String) {
       }
     }
   }
-  
 `

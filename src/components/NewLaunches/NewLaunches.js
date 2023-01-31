@@ -6,7 +6,7 @@ import NewLaunchesItem from "../NewLaunchesItem";
 
 const NewLaunches = props => {
     const { loading, error, data } = useQuery(FETCH_NEW_LAUNCHES, {
-        variables:{
+        variables: {
             "search": "milton"
         }
 
@@ -17,8 +17,8 @@ const NewLaunches = props => {
 
 
     useEffect(() => {
-        if(data){
-            // console.log(data.products.items);
+        if (data) {
+            // console.log(data.products.items);    
             setDataItem(data.products.items);
         }
     }, [data])
@@ -26,9 +26,9 @@ const NewLaunches = props => {
     return (
         <>
             {
-            !error && !loading && 
-            dataItem.map(item => <NewLaunchesItem item={item} key={item.uid} />)
-        }
+                !error && !loading &&
+                dataItem.map((item, index) => <NewLaunchesItem item={item} key={item.uid} class={index % 2 !== 0 ? "reverse-newLaunch" : ""} />)
+            }
         </>
     )
 }

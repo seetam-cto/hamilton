@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import "./customCategoryList.css";
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 import { Link } from "react-router-dom";
+import Image from "../Image";
+import ResourceImage from "../Image/resourceImage";
 
 const CustomCategoryList = () => {
 
@@ -30,7 +32,6 @@ const CustomCategoryList = () => {
         );
         return categoryUrl
     }
-
 
 
     return (
