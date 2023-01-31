@@ -1,0 +1,16 @@
+.offer-container {
+    padding: 1rem;
+    margin: 0 1.5rem;
+    background-color: #F4F4F5;
+    border-radius: 5px;
+    font-family: 'Noto Sans';
+}
+
+.offer-container h2 {
+    font-weight: 600;
+}
+
+.offer-container ul {
+    list-style: disc;
+    padding: 1rem;
+}

@@ -1,0 +1,14 @@
+.actionsContainer {
+    width: 100%;
+}
+.galleryRootContainer{
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.galleryRootContainer:hover {
+    background-color: rgb(231, 231, 231);
+}
+.galleryRootContainer:hover .rootButton{
+    visibility: visible;
+}

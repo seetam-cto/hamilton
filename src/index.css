@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+input {
+    border: 1px solid #d7d7d7 !important;
+    /* outline: none; */
+    margin-bottom: 2rem;
+}
+
+input:focus,
+input:active,
+select  /*jrb*/
+ {
+    box-shadow: none !important;
+}
+
+[aria-label="Add to Favorites"] {
+    display: grid;
+    place-content: flex-end;
+}
+
+[data-cy="FilterDefault-checkbox"] {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.quantity-stepper {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    /* padding: 0.5rem 0.6rem; */
+    border-radius: 5px;
+}
+
+.quantity-stepper input {
+    border: none !important;
+    outline: none;
+}
+
+.quantity-stepper button {
+    border: none;
+}
+
+.regular-price-style {
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 750px) {
+    .options-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .color-options {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+        padding-bottom: 2rem;
+    }
+
+    .variant-options {
+        grid-column-start: 2;
+    }
+
+    .capacity-options {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .quantity-stepper {
+        /*margin-left: 1.5rem;  /*jrb */
+        /*margin-bottom: 2rem;  /*jrb */
+        position: relative;
+        top: -4.5rem;
+        left: 25rem; 
+    }
+    .thumbnail-Container{
+        margin-bottom: 3rem; /* jrb */
+    }
+
+    [name="fashion_size"]{  /* jrb */
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: none;
+        height: 45px;
+        position: relative;
+    }
+    [name="fashion_size"] option:first-child{
+        border: 1px solid rgba(0, 0, 0, 0.3);;
+    }
+
+}
+
+/* filter */
+.galley-filter-container > div > button{
+    width: max-content;
+    background-color: #EE3D43;
+    color: white;
+    padding: 1rem;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.gallery-filters{
+    position: absolute;
+    z-index: 100;
+    min-width: 350px;
+}

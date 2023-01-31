@@ -1,0 +1,80 @@
+.product{
+    &-header{
+        &-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 43px;
+            color: #1A1B41;
+        }
+    }
+    &-action-buttons{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    &-addToCart{
+        width: 50%;
+        border: 1px solid black;
+        background-color: #EE3D43;
+        color: white;
+        border-radius: 5px;
+        padding: 0.5rem 0;
+
+        button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &-price{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        color: #1A1B41;
+        // &:after{
+        //     content: "Inclusive of all taxes";
+        //     font-family: 'Noto Sans';
+        //     font-style: normal;
+        //     font-weight: 400;
+        //     font-size: 12px;
+        //     line-height: 20px;
+        //     display: flex;
+        //     align-items: center;
+        //     color: #1A1B41;
+        //     opacity: 0.6;
+        // }
+    }
+    &-section{
+        margin-block: 5px;
+    }
+    &-short-description{
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1A1B41;
+        opacity: 0.8;
+    }
+    &-brand{
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #1A1B41;
+        opacity: 0.5;
+        margin-block: 5px;
+    }
+    &-divider{
+        width: 100%;
+        height: 1px;
+        background-color: #1A1B41;
+        opacity: 0.4;
+        margin-block: 10px;
+    }
+}

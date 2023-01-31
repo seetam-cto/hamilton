@@ -1,0 +1,26 @@
+.button{
+    padding: 15px 35px;
+    background-color: #EE3D43;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    &.wishlist{
+        background-color: #FFFFFF;
+        border: 1px solid #1A1B41;
+        color: #1A1B41;
+        &.selected{
+            background-color: #1A1B41;
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.rootButton {
+    width: 100%;
+    background-color: #EE3D43;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    visibility: hidden;
+}

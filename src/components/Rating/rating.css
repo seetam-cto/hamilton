@@ -1,0 +1,7 @@
+/*# sourceMappingURL=rating.css.map */
+
+.rating-container {
+    display: flex;
+    background-color: gold;
+    width: fit-content;
+}
