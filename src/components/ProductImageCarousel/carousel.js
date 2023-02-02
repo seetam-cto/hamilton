@@ -34,7 +34,6 @@ const IMAGE_WIDTH = 640;
  */
 const ProductImageCarousel = props => {
     const { images } = props;
-    console.log(images);
     const { formatMessage } = useIntl();
     const talonProps = useProductImageCarousel({
         images,

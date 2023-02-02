@@ -6,6 +6,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import Branch from './categoryBranch';
 import Leaf from './categoryLeaf';
 import defaultClasses from './categoryTree.module.css';
+import { Link } from 'react-router-dom';
 
 const Tree = props => {
     const {
@@ -28,29 +29,32 @@ const Tree = props => {
     // otherwise render a branch
     const branches = data
         ? Array.from(childCategories, childCategory => {
-              const [id, { category, isLeaf }] = childCategory;
-              return isLeaf ? (
-                  <Leaf
-                      key={id}
-                      category={category}
-                      onNavigate={onNavigate}
-                      categoryUrlSuffix={categoryUrlSuffix}
-                      tabIndex={tabIndex}
-                  />
-              ) : (
-                  <Branch
-                      key={id}
-                      category={category}
-                      setCategoryId={setCategoryId}
-                      tabIndex={tabIndex}
-                  />
-              );
-          })
+            const [id, { category, isLeaf }] = childCategory;
+            return isLeaf ? (
+                <Leaf
+                    key={id}
+                    category={category}
+                    onNavigate={onNavigate}
+                    categoryUrlSuffix={categoryUrlSuffix}
+                    tabIndex={tabIndex}
+                />
+            ) : (
+                <Branch
+                    key={id}
+                    category={category}
+                    setCategoryId={setCategoryId}
+                    tabIndex={tabIndex}
+                />
+            );
+        })
         : null;
 
     return (
         <div className={classes.root} data-cy="CategoryTree-root">
-            <ul className={classes.tree}>{branches}</ul>
+            <ul className={classes.tree}>
+                {branches}
+                <Link to="/new-launches">New-Launches</Link>
+            </ul>
         </div>
     );
 };

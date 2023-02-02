@@ -56,7 +56,6 @@ const GalleryItem = props => {
 
     const { url: smallImageURL } = small_image;
     const productLink = resourceUrl(`/${url_key}${productUrlSuffix || ''}`);
-    console.log('jyoti',item);
 
     const wishlistButton = wishlistButtonProps ? (
         <WishlistGalleryButton {...wishlistButtonProps} showIcon={true} />

@@ -13,5 +13,8 @@ module.exports = componentOverride = {
     // ['@magento/venia-ui/lib/components/Main/main.js']: 'src/components/Main/main.js',
     ['@magento/venia-ui/lib/components/Breadcrumbs/breadcrumbs.js']: 'src/components/Breadcrumbs/breadcrumbs.js',
     ['@magento/venia-ui/lib/components/MegaMenu/megaMenu.js']: 'src/components/MegaMenu/megaMenu.js',
+    ['@magento/venia-ui/lib/components/CategoryTree']: 'src/components/CategoryTree',
+    ['@magento/venia-ui/lib/RootComponents/Category/categoryContent.js']: 'src/components/CategoryContent'
+
 
 };

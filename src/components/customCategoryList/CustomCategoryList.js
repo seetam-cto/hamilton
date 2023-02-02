@@ -24,7 +24,6 @@ const CustomCategoryList = () => {
         }
     })
 
-    console.log(categories?.data?.children);
 
     let itemUrl = (urlPath) => {
         const categoryUrl = resourceUrl(

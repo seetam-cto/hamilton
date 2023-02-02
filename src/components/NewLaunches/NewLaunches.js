@@ -27,7 +27,7 @@ const NewLaunches = props => {
         <>
             {
                 !error && !loading &&
-                dataItem.map((item, index) => <NewLaunchesItem item={item} key={item.uid} class={index % 2 !== 0 ? "reverse-newLaunch" : ""} />)
+                dataItem.map((item, index) => <NewLaunchesItem item={item} key={item.uid} class={index % 2 == 0 ? "" : "reverse-newLaunch"} />)
             }
         </>
     )

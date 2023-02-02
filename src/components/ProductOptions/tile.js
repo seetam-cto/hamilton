@@ -67,8 +67,6 @@ const Tile = props => {
         console.log(e.target);
     }
 
-    console.log('attribute', attribute_code);
-
     return (
         <>
             {

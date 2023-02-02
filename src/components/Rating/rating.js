@@ -33,7 +33,6 @@ const Rating = props => {
                 <Icon size={18} src={Star} classes={{ root: classes.ratingIcon }} />
             </div> */}
             {
-                !starValue &&
                 <RatingStar
                     name="text-feedback"
                     value={starValue}

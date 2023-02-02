@@ -8,6 +8,7 @@ query GETPRODUCTS($search: String) {
         sku
         uid
         brand
+        __typename
         only_x_left_in_stock
         description {
           html
